@@ -5,7 +5,7 @@ import MoonIcon from '../icons/MoonIcon'
 const NavBar = () => {
 
     const [isDark, setIsDark] = useState(false)
-    console.log(isDark);
+    // console.log(isDark);
     
   return (
     <div className='flex items-center justify-between py-5 border-b'>
