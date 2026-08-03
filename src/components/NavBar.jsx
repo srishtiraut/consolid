@@ -26,7 +26,7 @@ const NavBar = () => {
         </div>
 
         <button onClick={() => setIsDark(!isDark)}
-        className="p-2 rounded-full hover:bg-gray-100 transition-colors">
+        className='p-2 rounded-full hover:bg-gray-100 transition-colors'>
         {/* isDark ? Sun icon : Moon icon */}
         {
             isDark ? (<SunIcon />) : (<MoonIcon />)
