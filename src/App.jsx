@@ -1,3 +1,4 @@
+import Heatmap from './components/Heatmap'
 import NavBar from './components/NavBar'
 import ProfileCard from './components/ProfileCard'
 
@@ -18,7 +19,7 @@ function App() {
         The inner div is responsible for appearance (border, padding, rounded corners).
         This separation becomes really useful later if you need to add things like sticky positioning, scrolling, or different backgrounds. */}
           <div className='border rounded-xl p-6 my-6'>
-            Heatmap coming soon...
+            <Heatmap />
           </div>
         </div>
       </div>
