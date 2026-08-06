@@ -2,7 +2,23 @@ import Heatmap from './components/Heatmap'
 import NavBar from './components/NavBar'
 import ProfileCard from './components/ProfileCard'
 
+import { useEffect, useState } from 'react'
+
 function App() {
+
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/srishtiraut").then((response)=>response.json()).then((data)=>{
+      // console.log(data);
+      setProfile(data);
+    });
+  
+    return () => {
+      
+    }
+  }, [])   //empty array [] means "Run this code only once, when the page first loads."
+  
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <NavBar />
@@ -11,7 +27,7 @@ function App() {
       <div className='flex flex-col lg:flex-row gap-6 my-6'>
         
         <div className="w-full lg:w-1/3">
-          <ProfileCard />
+          <ProfileCard profile={profile} />
         </div>
         
         <div  className="w-full lg:w-2/3 ">
