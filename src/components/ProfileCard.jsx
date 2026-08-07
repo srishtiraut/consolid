@@ -16,7 +16,9 @@ const ProfileCard = ({profile}) => {
                 alt="Profile"
                 className="w-40 h-40 rounded-full object-cover"
             />
-            {/* ?. is for optional chaining.  It means: If profile exists, use avatar_url. Otherwise, return undefined instead of crashing. */}
+            {/* ?. is for optional chaining.  It means: If profile exists, use avatar_url. Otherwise, return undefined instead of crashing. 
+            
+            added comment*/}
 
             <h2 className='text-2xl font-medium mt-6'>
                 {profile?.name}
