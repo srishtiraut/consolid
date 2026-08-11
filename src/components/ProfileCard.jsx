@@ -5,7 +5,7 @@ import mapPin from '../assets/map-pin.png'
 
 const ProfileCard = ({profile}) => {
 
-    console.log(profile);
+    // console.log(profile);
     
 
   return (

@@ -1,6 +1,7 @@
 import { ActivityCalendar } from "react-activity-calendar"
 import {data} from '../data/heatmapData.js'
 
+
 const Heatmap = () => {
   return (
     <div>
@@ -16,11 +17,15 @@ const Heatmap = () => {
                 light: ['red', 'hsl(0, 0%, 92%)', 'green'],
                 dark: ['red', 'hsl(0, 0%, 92%)', 'green'],
             }}
-            tooltips={{
-                activity: {
-                // text: ({ count, level }) => `${count} activities`,
-                text: ({ count, github, leetcode, gfg }) => `Github: ${github} Leetcode: ${leetcode} GFG: ${gfg} Total contributions: ${count}`,
-                withArrow: true,
+           tooltips={{
+    activity: {
+        text: (data) => {
+            return `Github: ${data.work?.github ?? 0}
+Leetcode: ${data.work?.leetcode ?? 0}
+GFG: ${data.work?.gfg ?? 0}
+Total contributions: ${data.count}`
+        },
+        withArrow: true,
                 },
             }}
             style={{ margin: '1.5rem 0'}}
