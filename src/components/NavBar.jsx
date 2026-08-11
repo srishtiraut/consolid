@@ -8,7 +8,7 @@ const NavBar = () => {
     // console.log(isDark);
     
   return (
-    <div className='flex items-center justify-between py-5 border-b'>
+    <div className='flex items-center justify-between py-5 border-b border-gray-400'>
         
         <div className="flex items-center gap-2">
             {/* Main logo */}

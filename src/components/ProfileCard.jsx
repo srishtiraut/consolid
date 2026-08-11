@@ -5,11 +5,8 @@ import mapPin from '../assets/map-pin.png'
 
 const ProfileCard = ({profile}) => {
 
-    // console.log(profile);
-    
-
   return (
-    <div className='border rounded-lg p-6 my-6'>
+    <div className='border border-gray-300 rounded-xl p-6 my-6'>
         <div className="flex flex-col items-center">
             <img
                 src={profile?.avatar_url} 
